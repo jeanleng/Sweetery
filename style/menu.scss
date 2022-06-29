@@ -1,0 +1,75 @@
+@import "./assets";
+@import "./base";
+
+section.menu {
+    margin: 0 auto;
+    padding: 1.5em;
+
+    .content {
+        background: rgba(255, 255, 255, 0.5);
+        padding: 2em;
+        // display: grid;
+        // grid-auto-flow: row;
+        // gap: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5em;
+        
+        .item {
+            text-align: center;
+            list-style: none;
+            font-size: 1.25rem;
+            ul {
+                list-style: none;
+            }
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        span {
+            font-size: 1.75rem;
+        }
+    }
+
+    img {
+        width: 60%;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (min-width: 920px) {
+    section.menu {
+
+        .content {
+            padding: 3em;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .odd {
+            flex-direction: row;
+        }
+
+        .even {
+            flex-direction: row-reverse;
+        }
+        
+        img {
+            height: fit-content;
+            width: 40%;
+            margin: unset;
+        }
+           
+    }
+}
+    

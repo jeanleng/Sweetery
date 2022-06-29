@@ -1,0 +1,202 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+a {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    
+    a {
+        text-decoration: none;
+        color: $headText;
+        
+    }
+
+    .heading {
+        background: $nav;
+    }
+}
+
+.logo {
+    display: block;
+    font-family: 'Twinkle Star', cursive;
+    font-size: 1.75rem;
+    padding: 0.3em;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+
+.hamburger, .close {
+    position: absolute;
+    z-index: 50;
+    width: 2.2em;
+    margin: 0.5em auto;
+    left: 1.5em;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+.close {
+    display: none;
+    top: 0;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    background: $nav;
+    transform: translateX(-100%);
+    width: 50%;
+    height: 100vh;
+    
+    .navlink {
+        display: block;
+        padding: 1em 2em;
+        transition-duration: 0.25s;
+
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+}
+
+.open {
+    display: flex;
+    flex-direction: column;
+    animation: navopen 0.5s ease-in-out;
+    transform: translateX(0%);
+}
+
+.exit {
+    display: flex;
+    flex-direction: column;
+    animation: navclose 0.5s ease-in-out;
+}
+
+footer {
+    margin: 0;
+    background: $footer;
+    color: $headText;
+    
+    padding: 2em 1em;
+    text-align: center;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 1em;
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .socials {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4em;
+
+        img {
+            width: 1.5em;
+            margin: 1em 1.5em;
+            filter: invert(100%);
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+
+    .logo {
+        font-size: 3rem;
+        padding-bottom: 0;
+    }
+
+    nav, .exit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        transform: translate(0%);
+        width: 100%;
+        height: min-content;
+        
+        .navlink {
+            padding: 0.5em 1em;
+
+            &:hover {
+                background: fixed;
+            }
+        }
+
+    }
+
+    .hamburger, .close {
+        display: none;
+        transform: translateY(-200%);
+    }
+
+    section.about {
+        .content {
+            padding: 2em 6em;
+        }
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 3em;
+    }
+}
+
+@keyframes onload {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes navopen {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes navclose {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

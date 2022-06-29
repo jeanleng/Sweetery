@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$primaryBtn: #3664af;
+$textColor: black;
+$fontSize: 1em;
+$primaryFont: 'Montserrat', sans-serif;
+@mixin displayFlex($flexDir : column) {
+    display: flex;
+    flex-direction: $flexDir;
+    justify-content: center;
+}
+
+
+body {
+    background: rgb(191, 209, 241);
+    font-family: $primaryFont;
+    @include displayFlex($flexDir: column);
+}
+
+nav {
+    display: flex;
+}
+
+menu {
+    list-style: none;
+    display: flex;
+    padding: .5em;
+    display: flex;
+    @include displayFlex($flexDir: column);
+    
+    a {
+        color: $textColor;
+        text-decoration: none;
+    }
+
+    li {
+        padding: .5em;
+    }
+}
+
+main {
+
+}
+
+footer {
+
+}
