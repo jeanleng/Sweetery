@@ -290,6 +290,7 @@ section.menu .content .item {
   text-align: center;
   list-style: none;
   font-size: 1.25rem;
+  padding: 0;
 }
 
 section.menu .content .item ul {
