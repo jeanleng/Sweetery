@@ -2,7 +2,8 @@
 @import "./base";
 
 section.hero {
-    top: 0;
+    position: relative;
+    top: -5em;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -12,7 +13,7 @@ section.hero {
         position: absolute;
         top: 0;
         width: 100%;
-        height: 100vh;
+        height: calc(100vh + 5em);
         z-index: 0;
         background: url('../images/hero-coffee.jpg');
         background-size: cover;
@@ -59,8 +60,6 @@ section.hero {
         &:hover {
             background: #000;
             border: #000 0.15em solid;
-            // color: #fff;
-            // border-radius: 5px 30px 5px 5px;
         }
     }
 
@@ -95,7 +94,7 @@ section.about {
 
     img {
         width: 100%;
-        height: 30em; //80vh or 30em
+        height: 30em;
         object-fit: cover;
         object-position: 0 88%;
     }
