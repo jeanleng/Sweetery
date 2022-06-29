@@ -8,9 +8,6 @@ section.menu {
     .content {
         background: rgba(255, 255, 255, 0.5);
         padding: 2em;
-        // display: grid;
-        // grid-auto-flow: row;
-        // gap: 1.5em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,6 +17,7 @@ section.menu {
             text-align: center;
             list-style: none;
             font-size: 1.25rem;
+            padding: 0;
             ul {
                 list-style: none;
             }
