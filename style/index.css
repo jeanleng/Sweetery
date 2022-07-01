@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   background: #ccc;
   font-family: 'Nunito', sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -340,10 +341,13 @@ section.hero .btn:hover {
 section.hero .downArrow {
   display: block;
   position: absolute;
-  bottom: 2em;
+  bottom: 1em;
   width: 2.5em;
   margin: 0 calc(50% - 1.25em);
   animation: arrow 0.8s alternate-reverse infinite;
+}
+
+section.hero .downArrow img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }

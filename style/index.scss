@@ -66,11 +66,14 @@ section.hero {
     .downArrow {
         display: block;
         position: absolute;
-        bottom: 2em;
+        bottom: 1em;
         width: 2.5em;
         margin: 0 calc(50% - 1.25em);
         animation: arrow 0.8s alternate-reverse infinite;
-        filter: invert(100%);
+
+        img {
+            filter: invert(100%);
+        }
     }
 
 }
