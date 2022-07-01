@@ -35,7 +35,7 @@
                     <div class="btn">Menu</div>
                 </a>
             </div>
-            <a class="downArrow" href="#about"><img class="downArrow" src="../images/down-arrow.svg" alt="scroll down"></a>
+            <img class="downArrow" src="../images/down-arrow.svg" alt="scroll down">
             
         </section>
         <section class="about" id="about">
@@ -80,5 +80,14 @@
     </div>
 
     <script src="../javascript/navbar.js"></script>
+    <script>
+        const down = document.querySelector('.downArrow');
+        const scrollDown = document.querySelector('.hero').offsetHeight;
+        
+
+        down.addEventListener('click', () => {
+            window.scrollTo(0, (scrollDown));
+        });
+    </script>
 </body>
 </html>

@@ -341,13 +341,10 @@ section.hero .btn:hover {
 section.hero .downArrow {
   display: block;
   position: absolute;
-  bottom: 1em;
+  bottom: 2em;
   width: 2.5em;
   margin: 0 calc(50% - 1.25em);
   animation: arrow 0.8s alternate-reverse infinite;
-}
-
-section.hero .downArrow img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }

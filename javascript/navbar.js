@@ -15,9 +15,3 @@ close.addEventListener('click', () => {
     close.style.display = 'none';
     hamburger.style.display = 'unset';
 });
-
-// const header = document.querySelector('header');
-// const headerColor = 'rgba(150, 150, 150, 0.9)'
-// window.addEventListener('scroll', () => {
-//     header.style.background = headerColor;
-// });
